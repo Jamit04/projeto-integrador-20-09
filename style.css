@@ -1,52 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Página Inicial</title>
-</head>
-<body>
-  <style>
-     h1{
-        position: relative;
-        top: -100px;
-        margin-left: 15%;
-     }
-  </style>
-<style type="text/css">
+html, body {
+    height: 100%; 
+    margin: 0; 
+}
 
-    form{
-      border: 1px solid #000; 
-  
-    }
-</style>
-
-<form width: 1px; height: 50px;>
-     <img src="delta.jpg" alt="delta" width="200" height="150">
-     <h1>Formulário de Cadastro</h1>
-  </form><br>
-  <form >
-  <a href="index.html">Home</a>
-  <a href="cadastro.html">Cadastro</a> 
-  </form>
-  <br>
-  <form>
-    <br><br>
-    <br><br>
-    <br><br>
-    <br><br>
-    <br><br>
-    <br><br>
-    <br><br>
-    <br><br>
-    <br><br>
-    <br><br>
-  </form>
-  <br>
-  <footer>
-    <form style=" line-height: 0px; height: 30px; ">
-     <p>© 2015 Instituto Delta. All rights reserved</p>
-    </form>
-  </footer>
-</body>
-</html>
+body {
+    background-image: url('roupas.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
