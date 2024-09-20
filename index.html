@@ -1,241 +1,169 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cadastro</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-  .form-container {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-between 10px;
-  }
-
-  .sub-dp {
-    margin-left: 20px;
-  }
-
-  .form-group {
-    margin-bottom: 10px; 
-  }
-    .form-group {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      margin-bottom: 1px;
-    }
-    h1 {
-        position: relative;
-        top: -100px;
-        margin-left: 15%;
-    }
-    .form-group label {
-      width: 100px;
-      text-align: right;
-      margin-right: 5px;
-    }
-
-    .form-group input[type="text"],
-    .form-group select {
-      width: 100px;
-    }
-
-    .form-group select {
-      width: 220px;
-    }
-    .select-naturalidade option { 
-  font-size: 12px;
-    }
-    .form-group input[type="submit"] {
-      margin-left: 160px;
-    }
-
-  </style>
-  <style type="text/css">
-
-    form{border: 1px solid #000;
-      padding: 20px;}
-    .dp {
-      border: 1px soid red;
-      display: flex;
-      margin: 1rem 0;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Compras de Roupas</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 50%;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin: 10px 0 5px;
+        }
+        input, select {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #5cb85c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #4cae4c;
+        }
+        .mensagem {
+            display: none;
+            margin-top: 20px;
+            font-weight: bold;
+            text-align: center;
+            color: #5cb85c;
+        }
+        .devolucao {
+            margin-top: 30px;
+            border-top: 1px solid #ccc;
+            padding-top: 20px;
+        }
+        .mensagem-devolucao {
+            color: red;
+        }
+    </style>
 </head>
 <body>
-  <form width: 1px; height: 50px;>
-     <img src="delta.jpg" alt="delta" width="200" height="150">
-     <h1>Formulário de Cadastro</h1>
-  </form><br>
-  <form border:;>
-   <a href="index.html">Home</a>
-   <a href="cadastro.html">cadastro</a>
-  </form><br>
-  <form >
-    <fieldset>
-     <legend align="center">Dados Pessoais</legend>
-      <div class="dp">
-       <div class="sub-dp">
-         <div class="form-group">
-           <span style="margin-right: -62px;"></span>
-           <label for="cpf">CPF:</label>
-             <span style="margin-right: 72px;"></span>
-           <input type="text" id="cpf" name="cpf">
-           <p>&nbsp;(apenas números)</p>
-         </div>
-         <div class="form-group">
-           <span style="margin-right: -52px;"></span>
-           <label for="nome">Nome:</label>
-           <span style="margin-right: 62px;"></span>
-           <input type="text" id="nome" name="nome">
-         </div>
-         <div class="form-group">
-           <span style="margin-right: 0px;"></span> 
-           <label for="nacionalidade">Nacionalidade:</label>
-            <span style="margin-right: 10px;"></span>
-           <input type="text" id="nacionalidade" name="nacionalidade">
-         </div>
-         <div class="form-group">
-          <span style="margin-right: -69px;"></span>
-          <label for="tipo associação">Tipo</label>
-          <span style="margin-right: -25px;"></span> 
-          <label for="tipo associação">Associação:</label>
-          <select id="tipo associação" name="tipo associação">
-            <option value="estudante">Estudante(R$15.00 por ano)</option>
-            <option value="padrao">Padrão</option>
-            <option value="premium">Premium</option>
-          </select>
-         </div>
-         <div class="form-group" >
-           <span style="margin-right: -69px;"></span>
-           <label for="rg">RG:</label>
-           <span style="margin-right: 80px;"></span>
-           <input type="text" id="rg" name="rg">
-            <span style="margin-right: -30px;"></span> 
-           <label for="emissor">Emissor:</label>
-           <input type="text" id="emissor" name="emissor">
-         </div>
-       </div>
-       <div class="sub-dp">
-         <div class="form-group" style="margin-top:10px;">
-           <span style="margin-right: -8px;"></span>
-           <label for="nascimento">Nascimento:</label>
-           <span style="margin-right: 5px;"></span>
-           <input type="text" id="nascimento" name="nascimento" placeholder="dd/mm/aaaa">
-         </div>
-         <div  class="form-group " style="margin-top:10px;">
-           <span style="margin-right: -2px;"></span>
-           <label for="naturalidade">Naturalidade:</label>
-           <span style="margin-right: -2px;"></span>
-           <input type="text" id="emissor" name="naturalidade" >
-           <span style="margin-left: 10px;"></span> 
-           <select id="naturalidade" name="naturalidade" style="width: 50px;" >
-             <option value="AC">AC</option>
-             <option value="AL">AL</option>
-             <option value="AP">AP</option>
-             <option value="AM">AM</option>
-             <option value="BA">BA</option>
-             <option value="CE">CE</option>
-             <option value="DF">DF</option>
-             <option value="ES">ES</option>
-             <option value="GO">GO</option>
-             <option value="MA">MA</option>
-             <option value="MT">MT</option>
-             <option value="MS">MS</option>
-             <option value="MG">MG</option>
-             <option value="PA">PA</option>
-             <option value="PB">PB</option>
-             <option value="PR">PR</option>
-             <option value="PE">PE</option>
-             <option value="PI">PI</option>
-             <option value="RJ">RJ</option>
-             <option value="RN">RN</option>
-             <option value="RS">RS</option>
-             <option value="RO">RO</option>
-             <option value="RR">RR</option>
-             <option value="SC">SC</option>
-             <option value="SP">SP</option>
-             <option value="SE">SE</option>
-             <option value="TO">TO</option>
-           </select>
-         </div>
-         <div class="form-group" style="margin-top:5px;">
-           <span style="margin-right: -4px;"></span>
-           <label for="estado-civil">Estado Civil:</label>
-           <select id="estado-civil" name="estado-civil">
-             <option value="solteiro(a)">Solteiro(a)</option>
-             <option value="casado(a)">Casado(a)</option>
-          </select>
-         </div>
-         <div class="form-group" style="margin-top: -15px;">
-           <span style="margin-right: -15px;"></span>
-           <label for="instituicao ">Instituição:</label>
-           <span style="margin-right: 10px;"></span>
-           <input type="text" id="instituicao" name="instituicao">
-           <p>&nbsp;(universidade,faculdade,empresa etc.)</p>
-         </div>
-         <div class="form-group" style="margin-top: -15px">
-           <span style="margin-right: -25px;"></span>
-           <label for="profissao">Profissão:</label>
-           <span style="margin-right: 20px;"></span>
-           <input type="text" id="profissao" name="profissao">
-         </div>
-       </div>
-     </div>
-     <br>
-   </fieldset>
+    <div class="container">
+        <h1>Registro de Compras de Roupas</h1>
+        <form id="form-compra">
+            <label for="nome-item">Nome da Roupa:</label>
+            <input type="text" id="nome-item" name="nome-item" required>
 
-  <br>
-   <fieldset>
-  <legend align="center">Dados para Contato</legend>
-    <div class="dp">
-      <div class="sub-dp">
-        <div class="form-group">
-          <label for="logradouro">Logradouro:</label>
-          <input type="text" id="logradouro" name="logradouro">
+            <label for="categoria">Categoria:</label>
+            <select id="categoria" name="categoria">
+                <option value="camiseta">Camiseta</option>
+                <option value="calça">Calça</option>
+                <option value="jaqueta">Jaqueta</option>
+                <option value="shorts">Shorts</option>
+                <option value="calçados">Calçados</option>
+                <option value="roupas-de-praia">Roupas de Praia</option>
+                <option value="acessórios">Acessórios</option>
+                <option value="ternos">Ternos</option>
+                <option value="gravatas">Gravatas</option>
+                <option value="cuecas">Cuecas</option>
+                <option value="vestidos">Vestidos</option>
+                <option value="saias">Saias</option>
+                <option value="baby-doll">Baby Doll</option>
+                <option value="roupas-criancas-bebes">Roupas para Crianças e Bebês</option>
+                <option value="chapeus">Chapéus</option>
+                <option value="bones">Bonés</option>
+            </select>
+
+            <label for="marca">Marca:</label>
+            <select id="marca" name="marca">
+                <option value="gucci">Gucci</option>
+                <option value="renner">Renner</option>
+                <option value="lacoste">Lacoste</option>
+                <option value="nike">Nike</option>
+                <option value="olympikus">Olympikus</option>
+                <option value="colcci">Colcci</option>
+                <option value="adidas">Adidas</option>
+                <option value="calvin-klein">Calvin Klein</option>
+                <option value="fila">Fila</option>
+                <option value="puma">Puma</option>
+                <option value="vogue">Vogue</option>
+            </select>
+
+            <label for="valor">Valor (R$):</label>
+            <input type="number" id="valor" name="valor" step="0.01" required>
+
+            <label for="data-compra">Data da Compra:</label>
+            <input type="date" id="data-compra" name="data-compra" required>
+
+            <button type="submit">Registrar Compra</button>
+        </form>
+
+        <div id="mensagem" class="mensagem">
+            Compra registrada. Obrigado pela preferência e volte sempre!
         </div>
-        <div class="form-group">
-          <label for="complemento">Complemento:</label>
-          <input type="text" id="complemento" name="complemento">
+
+        <div class="devolucao">
+            <h2>Política de Devolução</h2>
+            <p>Você pode solicitar a devolução da sua compra dentro de 7 dias úteis após a compra.</p>
+            <p>Se a devolução for feita dentro deste período, você poderá optar por um reembolso ou troca do produto.</p>
+            <form id="form-devolucao" style="display: none;">
+                <label for="nome-devolucao">Nome do Produto:</label>
+                <input type="text" id="nome-devolucao" name="nome-devolucao" required>
+                <label for="data-devolucao">Data da Solicitação de Devolução:</label>
+                <input type="date" id="data-devolucao" name="data-devolucao" required>
+                <button type="submit">Solicitar Devolução</button>
+            </form>
+            <button id="botao-devolucao">Solicitar Devolução</button>
+            <div id="mensagem-devolucao" class="mensagem-devolucao"></div>
         </div>
-        <div class="form-group">
-          <label for="cep">CEP:</label>
-          <input type="text" id="cep" name="cep">
-        </div>
-        <div class="form-group">
-          <label for="email">Email:</label>
-          <input type="text" id="email" name="email">
-        </div>
-      </div> 
-      <div class="sub-dp">
-        <div class="form-group">
-          <label for="numero">Número:</label>
-          <input type="text" id="numero" name="numero">
-        </div>
-        <div class="form-group">
-          <label for="bairro">Bairro:</label>
-          <input type="text" id="bairro" name="bairro">
-        </div>
-        <div class="form-group">
-          <label for="cidade">Cidade:</label>
-          <input type="text" id="cidade" name="cidade">
-        </div>
-        <div class="form-group">
-        <label for="telefone">Telefone:</label>
-        <input type="text" id="telefone" name="telefone">
-      </div>
     </div>
-   </fieldset><br>
-   <button type="submit" name="btn_confirmar">Confirmar</button>
-  </form>
-  <br>
-  <footer>
-    <form style=" line-height: 0px; height: 5px; ">
-     <p>© 2024 Instituto Delta. Todos os Direitos Reservados</p>
-    </form>
-  </footer>
+
+    <script>
+        document.getElementById('form-compra').addEventListener('submit', function(event) {
+            event.preventDefault();
+            document.getElementById('mensagem').style.display = 'block';
+        });
+
+        document.getElementById('botao-devolucao').addEventListener('click', function() {
+            document.getElementById('form-devolucao').style.display = 'block';
+            document.getElementById('botao-devolucao').style.display = 'none';
+        });
+
+        document.getElementById('form-devolucao').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const dataCompra = new Date(document.getElementById('data-compra').value);
+            const dataDevolucao = new Date(document.getElementById('data-devolucao').value);
+            const diasUteis = 7; // Prazo de devolução em dias úteis
+
+            const tempoPassado = (dataDevolucao - dataCompra) / (1000 * 60 * 60 * 24); // Tempo passado em dias
+
+            if (tempoPassado <= diasUteis) {
+                document.getElementById('mensagem-devolucao').innerText = 'Solicitação de devolução enviada com sucesso!';
+                document.getElementById('mensagem-devolucao').style.color = '#5cb85c';
+            } else {
+                document.getElementById('mensagem-devolucao').innerText = 'O prazo da devolução foi excedido e não é possível fazer a devolução.';
+                document.getElementById('mensagem-devolucao').style.color = 'red';
+            }
+            document.getElementById('mensagem-devolucao').style.display = 'block';
+            document.getElementById('form-devolucao').reset();
+        });
+    </script>
 </body>
-<br>
 </html>
